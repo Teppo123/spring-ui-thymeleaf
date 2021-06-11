@@ -1,7 +1,13 @@
 server:
   port: 8122
+  
 url:
   userController: http://localhost:8123/user-controller
-  deleteUser: ${self:url.userController}/delete-user
-  getUsers: ${self:url.userController}/users
-  saveUser: ${self:url.userController}/save-user
+  deleteUser: http://localhost:8123/user-controller/delete-user
+  getUsers: http://localhost:8123/user-controller/users
+  saveUser: http://localhost:8123/user-controller/save-user
+
+logging:
+  level:
+    com:
+      example: DEBUG
